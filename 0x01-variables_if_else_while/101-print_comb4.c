@@ -1,42 +1,35 @@
 #include <stdio.h>
 
 /**
- * main- Entry point
- * @void: Null value
+ * main - Prints all possible combinations of three different digits,
+ *        in ascending order, separated by a comma followed by a space.
  *
- * Description: Prints numbers from 00 to 99
- * Return: 0
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int i = 0;
-	int j, k;
-	int count = 0;
+	int digit1, digit2, digit3;
 
-	while (i <= 7)
+	for (digit1 = 0; digit1 < 8; digit1++)
 	{
-		j = i + 1;
-		while (j <= 8)
+		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
 		{
-			k = j + 1;
-			while (k <= 9)
+			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				putchar(k + '0');
-				if (count != 119)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-				k++;
-				count++;
+				putchar((digit1 % 10) + '0');
+				putchar((digit2 % 10) + '0');
+				putchar((digit3 % 10) + '0');
+
+				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+					continue;
+				
+				putchar(',');
+				putchar(' ');
 			}
-			j++;
 		}
-		i++;
 	}
+
 	putchar('\n');
-i	return (0);
+
+	return (0);
 }
