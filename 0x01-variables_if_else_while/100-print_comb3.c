@@ -2,6 +2,7 @@
 
 /*
  * main- Entry point
+ *@void: Null value
  *
  * Description- Prints numbers 0 to 99
  * Return (0)
