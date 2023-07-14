@@ -1,25 +1,24 @@
 #include <stdio.h>
+
 /**
- * main - represent Entry Point to the program
+ * main- Entry point
  *
- * Return: 0 to stop the program
+ * Prints numbers 0 to 9 separated by commas and spaces
+ * Return: (0)
  */
 int main(void)
 {
-unsigned char a = '0';
-int i;
+	int n;
 
-for (i = 0; i < 10; i++)
-{
-putchar(a);
-a++;
-}
-a = '1';
-for (i = 0; i < 6; i++)
-{
-putchar('0' + a);
-a++;
-}
-putchar('\n');
-return (0);
+	for (n = '0'; n <= '9'; n++)
+	{
+		putchar(n);
+		if (n != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
