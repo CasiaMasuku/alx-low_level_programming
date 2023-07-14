@@ -6,26 +6,19 @@
 int main(void)
 {
 	int i = 0;
-	int j;
-	int count = 0;
+	
 
-	while (i <= 8)
+	while (i < 10)
 	{
-		j = i + 1;
-		while (j <= 9)
+		putchar(i + '0');
+		if (i < 9)
 		{
-			putchar(i + '0');
-			putchar(j + '0');
-			if (count != 44)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			j++;
-			count++;
+			putchar(44);
+			putchar(32);
 		}
 		i++;
 	}
 	putchar('\n');
+
 	return (0);
 }
