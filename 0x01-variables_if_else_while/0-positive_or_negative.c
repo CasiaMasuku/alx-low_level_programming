@@ -1,19 +1,16 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
-/* betty style doc for function main goes there */
-int main(void)
-{
-	int n;
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	if (n > 0){
-	        Printf (n + "is positive");
-	}else if(n < 0){
-		Printf (n + "is negative");
-	}else{
-		Printf (n + "is zero");
-	}  
+int main() {
+  srand(time(0));
+  int n = rand() - RAND_MAX / 2;
+  std::cout << n << std::endl;
+  if (n > 0) {
+    std::cout << "is positive" << std::endl;
+  } else if (n == 0) {
+    std::cout << "is zero" << std::endl;
+  } else {
+    std::cout << "is negative" << std::endl;
+  }
 }
