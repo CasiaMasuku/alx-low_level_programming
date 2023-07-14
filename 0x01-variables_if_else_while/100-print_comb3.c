@@ -2,7 +2,9 @@
 
 /*
  * main- Entry point 
- * Prints numbers 0 to 99
+ */
+
+/* Prints numbers 0 to 99
  * Return: (0)
  */
 
