@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-/*
- * main- Entry point
- */
+/* main- Entry point */
 
 /* Description- Prints numbers 0 to 99 */
 int main(void)
