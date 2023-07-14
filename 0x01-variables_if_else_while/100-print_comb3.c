@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /*
- * main- Entry point 
- *Description: Prints numbers 0 to 99
- * Return: (0)
+ * main- Entry point
+ *
+ * Description- Prints numbers 0 to 99
+ * Return (0)
  */
 
 int main(void)
