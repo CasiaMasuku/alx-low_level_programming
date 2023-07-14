@@ -2,10 +2,9 @@
 
 /*
  * main- Entry point
- *
- * Description- Prints numbers 0 to 99
- * Return (0)
  */
+
+/* Description- Prints numbers 0 to 99 */
 int main(void)
 {
 	int i = 0;
