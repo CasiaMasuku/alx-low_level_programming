@@ -1,24 +1,37 @@
 #include <stdio.h>
 
-/** Description- Prints numbers 0 to 99, separated by a comma followed by a space.
- * Return: (0)
+/**
+ * main - Prints numbers between 00 to 89.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i = 0;
-	
+	int i, e;
 
-	while (i < 10)
+	i = 48;
+	e = 48;
+
+	while (e < 58)
 	{
-		putchar(i + '0');
-		if (i < 9)
+		i = 48;
+		while (i < 58)
 		{
-			putchar(44);
-			putchar(32);
+			if (e != i && e < i)
+			{
+				putchar(e);
+				putchar(i);
+				if (i == 57 && e == 56)
+				{
+					break;
+				}
+				putchar(',');
+				putchar(' ');
+			}
+			i++;
 		}
-		i++;
+		e++;
 	}
 	putchar('\n');
-
 	return (0);
 }
