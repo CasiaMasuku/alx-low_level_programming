@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/* main- Entry point */
-
-/* Description- Prints numbers 0 to 99 */
+/** Description- Prints numbers 0 to 99, separated by a comma followed by a space.
+ * Return: (0)
+ */
 int main(void)
 {
 	int i = 0;
