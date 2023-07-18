@@ -8,7 +8,7 @@
 void print_alphabet_x10(void)
 {
 int x = 0;
-char alpha = 'z'
+char alpha = 'z';
 for(x = 0; x <= 9; x++)
-putchar(alpha)
+putchar(alpha);
 }
