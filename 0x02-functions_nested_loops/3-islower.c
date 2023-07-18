@@ -3,6 +3,7 @@
 /**
  *_islower-prints 1 for lowercase character and 0 if else
  *
+ * @c: verify this character
  * Return: (0)
  */
 int _islower(int c)
@@ -10,5 +11,5 @@ int _islower(int c)
 if (c >= 'a' && c <= 'z')
 return (1);
 else
-return 0;
+return (0);
 }
