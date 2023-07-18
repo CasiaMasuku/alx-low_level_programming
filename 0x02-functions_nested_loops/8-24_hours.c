@@ -6,8 +6,8 @@
  *Description: prints a list of time
  *return: 0
  */
-void jack_bauer(void)
 jack_bauer();
+void jack_bauer(void)
 {
 int m, h;
 for (h = 0; h <= 23; h++)
