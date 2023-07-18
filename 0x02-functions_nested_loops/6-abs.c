@@ -3,17 +3,17 @@
 /**
  *_abs-computes the absolute value of an integer
  *
- *@n- verifyt
- *Return: value of @n
+ *@x- verify targeted int
+ *Return: value of @x
  */
-int _abs(int n)
+int _abs(int x)
 {
-if (n < 0)
+if (x < 0)
 {
-return (-n);
+return (-x);
 }
 else
 {
-return (n);
+return (x);
 }
 }
