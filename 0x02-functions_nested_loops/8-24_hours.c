@@ -3,9 +3,11 @@
 /**
  *jack_bauer-prints time, starting from 00:00 to 23:59
  *
+ *Description: prints a list of time
  *return: 0
  */
 void jack_bauer(void)
+jack_bauer();
 {
 int m, h;
 for (h = 0; h <= 23; h++)
