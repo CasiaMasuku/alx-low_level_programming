@@ -13,13 +13,13 @@ int z;
 if (x < 0)
 {
 z = -1 * (x % 10);
-_putchar(r + '0');
-return (r);
+_putchar(z + '0');
+return (z);
 }
 else
 {
 z = x % 10;
-_putchar(r + '0');
-return (r);
+_putchar(z + '0');
+return (z);
 }
 }
