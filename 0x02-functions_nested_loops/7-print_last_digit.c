@@ -8,7 +8,18 @@
  */
 int print_last_digit(int x)
 {
-int digit = x % 10;
-printf("Last digit of %d is: %d", x, digit);
-return digit;
+int z;
+
+if (x < 0)
+{
+z = -1 * (x % 10);
+_putchar(r + '0');
+return (r);
+}
+else
+{
+z = x % 10;
+_putchar(r + '0');
+return (r);
+}
 }
