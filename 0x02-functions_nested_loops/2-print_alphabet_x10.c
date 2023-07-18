@@ -13,6 +13,6 @@ for(x = 0; x <= 9; x++){
 for (alpha = 'a'; alpha <= 'z'; alpha++){
 _putchar(alpha);
 }
-_putchar('\n')
+_putchar('\n');
 }
 }
