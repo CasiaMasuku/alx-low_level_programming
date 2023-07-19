@@ -14,8 +14,8 @@ for (x = 0; x <= 10; x++)
 {
 for (i = 0; i <= 10; i++)
 {
-printf((x * i) + ' ');
+_putchar((x * i) + ' ');
 }
-printf("\n");
+_putchar('\n');
 }
 }
