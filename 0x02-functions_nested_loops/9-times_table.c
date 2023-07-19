@@ -22,9 +22,16 @@ printf("%d" , multi);
 }
 else
 {
+if(multi > 9){
 printf("%d" , multi);
 putchar(',');
 putchar(' ');
+}else{
+printf("%d" , multi);
+putchar(',');
+putchar(' '); 
+putchar(' ');
+}
 }
 }
 putchar('\n');
