@@ -1,8 +1,6 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-void jack_bauer();
+
 /**
  *jack_bauer-prints time, starting from 00:00 to 23:59
  *
