@@ -22,7 +22,8 @@ printf("%d" , multi);
 }
 else
 {
-if(multi > 9){
+if((multi > 9 || (x > 4 && i > 0) || (x == 4 && i == 2) || (x == 3 && i == 3) || (x == 2 && i == 4))
+{
 printf("%d" , multi);
 putchar(',');
 putchar(' ');
