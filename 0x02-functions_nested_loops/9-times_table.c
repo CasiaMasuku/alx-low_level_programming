@@ -16,6 +16,6 @@ for (n = 0; n <= 10; n++)
 {
 printf(x * n + " ");
 }
-printf('\n')
+printf('\n');
 }
 }
