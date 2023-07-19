@@ -8,20 +8,34 @@
  *Return: 0
  */
 void print_to_98(int n)
-for (x = n; x >= 98; x--)
+if (n > 98)
 {
-for (x = n; x <= 98; x++)
+for (x = n; x >= 98; x--)
 {
 if (x == 98)
 printf(x)
 }
 else
 {
-{
 printf(x);
 _putchar(',');
 _putchar(' ');
 }
 }
-putchar('\n');
+{
+else
+}
+for (x = n; x <= 98; x++)
+if (x == 98)
+{
+printf(x);
+}
+else
+{
+printf(x);
+_putchar(',');
+_putchar(' ');
+{
+_putchar('\n');
+}
 }
