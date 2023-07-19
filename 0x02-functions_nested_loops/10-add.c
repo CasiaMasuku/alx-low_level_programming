@@ -5,7 +5,7 @@
  *
  *@x: is the first integer
  *@z: is the second integer
- *Returns: 0
+ *Returns: x + z
  */
 int add(int x, int z)
 {
