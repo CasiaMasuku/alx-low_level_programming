@@ -16,13 +16,13 @@ for (x = 0; x <= 9; x++)
 for (i = 0; i <= 9; i++)
 {
 multi = x * i;
-if(i == 9)
+if (i == 9)
 {
 printf("%d", multi);
 }
 else
 {
-if(multi > 9 || (x > 4 && i > 0) || (x == 4 && i == 2) || (x == 3 && i == 3) || (x == 2 && i == 4))
+if (multi > 9 || (x > 4 && i > 0) || (x == 4 && i == 2) || (x == 3 && i == 3) || (x == 2 && i == 4))
 {
 printf("%d", multi);
 putchar(',');
