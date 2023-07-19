@@ -9,8 +9,13 @@
 void times_table(void)
 {
 int x;
+int n;
 for (x = 0; x <= 10; x++)
 {
-printf("9 * %d = %d\n", x, 9 * x);
+for (n = 0; n <= 10; n++)
+{
+printf(x * n + " ");
+}
+printf('\n')
 }
 }
