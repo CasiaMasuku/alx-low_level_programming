@@ -1,10 +1,11 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  *print_to_98 -  prints all natural numbers from n to 98
  *
- *@n: is the character to start with
- *Return: 0
+ *@n: is the integer to start with
+ *Return: no return
  */
 void print_to_98(int n)
 {
