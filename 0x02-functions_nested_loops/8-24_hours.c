@@ -1,11 +1,17 @@
 #include "main.h"
 
+void jack_bauer();
 /**
  *jack_bauer-prints time, starting from 00:00 to 23:59
  *
  *Description: prints a list of time
  *return: 0
  */
+int main()
+{
+jack_bauer();
+return 0;
+}
 void jack_bauer(void)
 {
 int hour, minute;
