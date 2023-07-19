@@ -6,23 +6,19 @@
  *Description: prints a list of time
  *return: 0
  */
-int main(void)
+void jack_bauer(void)
 {
-jack_bauer();
-return (0);
-}
+int hour, minute;
+for (hour = 0; hour <= 23; hour++)
 {
-int m, h;
-for (h = 0; h <= 23; h++)
+for (minute = 0; minute <= 59; minute++)
 {
-for (m = 0; m <= 59; m++)
-{
-_putchar((h / 10) + '0');
-_putchar((h % 10) + '0');
+_putchar((hour / 10) + '0');
+_putchar((hour % 10) + '0');
 _putchar(':');
-_putchar((m / 10) + '0');
-_putchar((m % 10) + '0');
-_putchar(10);
+_putchar((minute / 10) + '0');
+_putchar((minute % 10) + '0');
+_putchar('\n');
 }
 }
 }
