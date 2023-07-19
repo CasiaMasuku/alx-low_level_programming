@@ -34,6 +34,7 @@ else
 {
 printf(x);
 _putchar(',');
+_putchar(' ');
 {
 _putchar('\n');
 }
