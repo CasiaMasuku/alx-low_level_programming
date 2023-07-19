@@ -6,8 +6,11 @@
  *Description: prints a list of time
  *return: 0
  */
+int main(void)
+{
 jack_bauer();
-void jack_bauer(void)
+return (0);
+}
 {
 int m, h;
 for (h = 0; h <= 23; h++)
