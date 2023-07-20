@@ -6,7 +6,7 @@
  *@n: parameter
  *Return: no return
  */
-void print_times_table(int n);
+void print_times_table(int n)
 {
 int num, val, sum;
 if (n <= 15 && n >= 0)
