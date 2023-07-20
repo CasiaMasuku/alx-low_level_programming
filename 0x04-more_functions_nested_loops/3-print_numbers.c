@@ -7,10 +7,10 @@
 */
 void print_numbers(void)
 {
-int sum;
-for (sum = 0; sum <= 9; sum++)
+int n;
+for (n = 0; n <= 9; n++)
 {
-_putchar((sum);
+printf("%d ",n);
 }
 _putchar('\n');
 }
