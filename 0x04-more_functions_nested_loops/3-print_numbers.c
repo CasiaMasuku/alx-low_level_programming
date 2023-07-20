@@ -5,12 +5,11 @@
 *
 *Return: no return
 */
-
 void print_numbers(void)
 {
 int sum;
 for (sum = 0; sum <= 9; sum++)
-_putchar((sum % 10) + '0');
+_putchar((sum);
 
 _putchar('\n');
 }
