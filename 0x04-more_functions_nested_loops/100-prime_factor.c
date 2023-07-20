@@ -6,6 +6,7 @@
  *
  * Return: 0 (succes)
  */
+int main(void)
 {
 long int n;
 long int max;
