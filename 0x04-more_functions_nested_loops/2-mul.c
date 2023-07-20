@@ -5,7 +5,7 @@
 * @a: first integer
 * @b: second integer
 *
-* Returns: result
+* Return: no result
 */
 int mul(int a, int b)
 {
