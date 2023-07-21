@@ -1,4 +1,4 @@
-#incude "main.h"
+#include "main.h"
 
 /**
  * print_triangle - prints a triangle
@@ -17,7 +17,7 @@ for (a = 1; a <= size; a++)
 {
 for (x = 1; x < size; x++)
 {
-_putcha(' ');
+_putchar(' ');
 }
 for (x = 1; x <= x; x++)
 {
