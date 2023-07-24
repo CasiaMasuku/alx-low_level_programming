@@ -18,7 +18,7 @@ for (a = 0; a < new; a++)
 {
 new--;
 rev = s[a];
-a[a] = s[new];
+s[a] = s[new];
 s[new] = rev;
 }
 }
