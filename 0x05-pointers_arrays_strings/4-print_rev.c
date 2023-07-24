@@ -6,7 +6,7 @@
  *
  * Returns: reverse string
  */
-void print_rev(char *s);
+void print_rev(char *s)
 {
 int x = 0;
 while (s[x] != '\0')
