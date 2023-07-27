@@ -20,7 +20,7 @@ i++;
 a = 0;
 while (a < n && src[a] != '\0')
 {
-dest[i] = src[j];
+dest[i] = src[a];
 i++;
 a++;
 }
