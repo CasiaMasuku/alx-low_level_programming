@@ -8,19 +8,15 @@
  */
 char *leet(char *str)
 {
-char *leet_str = str;
-char *leet_chars = "AaEeOoTtLl";
-char *leet_nums = "44330771";
-int i, j;
-for (i = 0; leet_str[i]; i++)
+int index1 = 0, index2;
+char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+while (str[++index1])
 {
-for (j = 0; leet_chars[j]; j++)
+for (index2 = 0; index2 <= 7; index2++)
 {
-if (leet_str[i] == leet_chars[j])
-{
-leet_str[i] = leet_nums[j];
-break;
-}
+if (str[index1] == leet[index2] ||
+ str[index1] - 32 == leet[index2])
+str[index1] = index2 + '0';
 }
 }
 return (str);
