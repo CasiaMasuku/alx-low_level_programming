@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
 *print_buffer - prints a buffer.
 * If the inputted byte size is 0 or less, the function only prints a new line
@@ -10,35 +11,33 @@
 */
 void print_buffer(char *b, int size)
 {
-int i = 0, j;
-if (size < 0)
+int i, j;
+if (size <= 0)
 {
-printf('\n');
+printf("\n");
 return;
 }
-while (i < size)
+for (i = 0; i < size; i += 10)
 {
-if (i % 10 == 0)
 printf("%08x: ", i);
-for (j = i; j < i + 9; j += 2)
+for (j = 0; j < 10; j++)
 {
-if ((j < size) && ((j + 1) < size))
-printf("%02x%02x: ", b[j], b[j + 1]);
+if (i + j < size)
+printf("%02x", b[i + j]);
 else
-{
-while (++j <= i + 10)
-printf(" ");
+printf("  ");
+if (j % 2 == 1)
 printf(" ");
 }
-}
-for (j = i; j < i + 9 && j < size; j++)
+for (j = 0; j < 10; j++)
 {
-if (b[j] >= 32 && b[j] <= 126)
-printf("%c", b[j]);
+if (i + j >= size)
+break;
+if (b[i + j] >= ' ' && b[i + j] <= '~')
+printf("%c", b[i + j]);
 else
 printf(".");
 }
-printf('\n');
-i += 10;
+printf("\n");
 }
 }
