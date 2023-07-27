@@ -8,18 +8,27 @@
  */
 char *rot13(char *str)
 {
-char *s = str;
-while (*s)
+int stringCount, rotation;
+char r1[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+'m', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+'Z'};
+char r2[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+'m', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+'M'};
+for (stringCount = 0; s[stringCount] != '\0'; stringCount++)
 {
-if (*s >= 'a' && *s <= 'z')
+for (rotation = 0; rotation < 53; rotation++)
 {
-*s = ((*s - 'a') + 13) % 26 + 'a';
-}
-else if (*s >= 'A' && *s <= 'Z')
+if (r1[rotation] == s[stringCount])
 {
-*s = ((*s - 'A') + 13) % 26 + 'A';
+s[stringCount] = r2[rotation];
+break;
 }
-s++;
 }
-return (str);
+}
+return (s);
 }
