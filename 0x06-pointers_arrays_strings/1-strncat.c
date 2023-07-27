@@ -16,6 +16,7 @@ i = 0;
 while (dest[i] != '\0')
 {
 i++;
+}
 a = 0;
 while (a < n && src[a] != '\0')
 {
