@@ -16,3 +16,4 @@ if (s[x] == c)
 return (&s[x]);
 }
 return (0)
+}
