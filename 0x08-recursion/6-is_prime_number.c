@@ -8,12 +8,17 @@
  */
 int is_prime_number(int n)
 {
-if ((!(n % 2) && n != 2) || n < 2)
+int i;
+if (n <= 1)
 {
 return (0);
 }
-else
+for (i = 2; i < n; i++)
 {
-return (divisors(3, n));
+if (n % i == 0)
+{
+return (0);
 }
+}
+return (1);
 }
