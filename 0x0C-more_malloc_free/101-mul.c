@@ -26,7 +26,7 @@ break;
 }
 if (isn1 == 1 || isn2 == 1)
 {
-_putchar("0\n");
+printf("0\n");
 exit(0);
 }
 }
@@ -61,7 +61,7 @@ int ln;
 for (ln = 0; argv[n][ln]; ln++)
 if (!isdigit(argv[n][ln]))
 {
-_putchar("Error\n");
+printf("Error\n");
 exit(98);
 }
 return (ln);
@@ -80,11 +80,11 @@ int main(int argc, char *argv[])
 int ln1, ln2, lnout, add, addl, i, j, k, ca;
 char *nout;
 if (argc != 3)
-_putchar("Error\n"), exit(98);
+printf("Error\n"), exit(98);
 ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
 _is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
 if (nout == NULL)
-_putchar("Error\n"), exit(98);
+printf("Error\n"), exit(98);
 nout = _initialize_array(nout, lnout);
 k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
 for (; k >= 0; k--, i--)
@@ -114,6 +114,6 @@ add = ((argv[1][i] - '0') * (argv[2][j] - '0')) + (nout[k] - '0') + addl;
 addl = add / 10, nout[k] = (add % 10) + '0';
 }
 }
-_putchar("%s\n", nout);
+printf("%s\n", nout);
 return (0);
 }
