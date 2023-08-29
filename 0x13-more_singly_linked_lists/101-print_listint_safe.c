@@ -15,7 +15,7 @@ const listint_t *slow, *fast;
 if (head == NULL)
 exit(98);
 slow = head;
-fast = head->nxt;
+fast = head->next;
 while (slow != NULL)
 {
 printf("[%p] %d\n", (void *)slow, slow->n);
@@ -25,9 +25,9 @@ if (slow == fast)
 printf("-> [%p] %d\n", (void *)fast, fast->n);
 break;
 }
-slow = slow->nxt;
-if (fast != NULL && fast->nxt != NULL)
-fast = fast->nxt->nxt;
+slow = slow->next;
+if (fast != NULL && fast->next != NULL)
+fast = fast->next->next;
 else
 fast = NULL;
 }

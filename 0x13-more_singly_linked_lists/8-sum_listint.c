@@ -13,7 +13,7 @@ listint_t *current = head;
 while (current != NULL)
 {
 sum += current->n;
-current = current->nxt;
+current = current->next;
 }
 return (sum);
 }

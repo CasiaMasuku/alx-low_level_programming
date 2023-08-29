@@ -13,19 +13,19 @@ listint_t *tmp, *fast, *slow;
 size_t count = 0;
 if (h == NULL || *h == NULL)
 return (0);
-fast = (*h)->nxt;
+fast = (*h)->next;
 slow = *h;
-while (fast && fast->nxt)
+while (fast && fast->next)
 {
-if (fast == slow) /* loop detected */
+if (fast == slow)
 {
 do {
 count++;
-fast = fast->nxt;
+fast = fast->next;
 } while (fast != slow);
 while (count > 0)
 {
-tmp = (*h)->nxt;
+tmp = (*h)->next;
 free(*h);
 *h = tmp;
 count--;
@@ -33,13 +33,13 @@ count--;
 *h = NULL;
 return (count);
 }
-fast = fast->nxt->nxt;
-slow = slow->nxt;
+fast = fast->next->next;
+slow = slow->next;
 }
 while (*h)
 {
 count++;
-tmp = (*h)->nxt;
+tmp = (*h)->next;
 free(*h);
 *h = tmp;
 }

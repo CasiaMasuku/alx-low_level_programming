@@ -15,7 +15,7 @@ new_node = malloc(sizeof(listint_t));
 if (new_node == NULL)
 return (NULL);
 new_node->data = n;
-new_node->nxt = NULL;
+new_node->next = NULL;
 last_node = *head;
 if (last_node == NULL)
 {
@@ -23,9 +23,9 @@ head = new_node;
 }
 else
 {
-while (last_node->nxt != NULL)
-last_node = last_node->nxt;
-last_node->nxt = new_node;
+while (last_node->next != NULL)
+last_node = last_node->next;
+last_node->next = new_node;
 }
 return (new_node);
 }

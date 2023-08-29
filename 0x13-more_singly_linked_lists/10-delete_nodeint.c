@@ -19,14 +19,14 @@ prev = NULL;
 for (i = 0; i < index && current != NULL; i++)
 {
 prev = current;
-current = current->nxt;
+current = current->next;
 }
 if (current == NULL)
 return (-1);
 if (prev == NULL)
-*head = current->nxt;
+*head = current->next;
 else
-prev->nxt = current->nxt;
+prev->next = current->next;
 free(current);
 return (1);
 }

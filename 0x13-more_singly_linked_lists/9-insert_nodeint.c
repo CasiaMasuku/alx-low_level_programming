@@ -21,7 +21,7 @@ return (NULL);
 new_node->n = n;
 if (idx == 0)
 {
-new_node->nxt = *head;
+new_node->next = *head;
 *head = new_node;
 return (new_node);
 }
@@ -31,12 +31,12 @@ while (current != NULL)
 {
 if (i == idx - 1)
 {
-new_node->nxt = current->nxt;
-current->nxt = new_node;
+new_node->next = current->next;
+current->next = new_node;
 return (new_node);
 }
 i++;
-current = current->nxt;
+current = current->next;
 }
 free(new_node);
 return (NULL);

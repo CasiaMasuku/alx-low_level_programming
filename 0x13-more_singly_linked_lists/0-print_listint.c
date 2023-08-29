@@ -13,7 +13,7 @@ size_t num = 0;
 while (h != NULL)
 {
 printf("%d\n", h->n);
-h = h->nxt;
+h = h->next;
 num++;
 }
 return (num);

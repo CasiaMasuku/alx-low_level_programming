@@ -13,10 +13,10 @@ if (head == NULL || *head == NULL)
 return (NULL);
 while (*head != NULL)
 {
-nxt = (*head)->nxt;
-(*head)->nxt = prev;
+next = (*head)->next;
+(*head)->next = prev;
 prev = *head;
-*head = nxt;
+*head = next;
 }
 *head = prev;
 return (*head);

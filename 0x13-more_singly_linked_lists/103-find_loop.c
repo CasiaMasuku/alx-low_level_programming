@@ -13,17 +13,17 @@ if (head == NULL)
 return (NULL);
 slow = head;
 fast = head;
-while (slow && fast && fast->nxt)
+while (slow && fast && fast->next)
 {
-slow = slow->nxt;
-fast = fast->nxt->nxt;
+slow = slow->next;
+fast = fast->next->next;
 if (slow == fast)
 {
 slow = head;
 while (slow != fast)
 {
-slow = slow->nxt;
-fast = fast->nxt;
+slow = slow->next;
+fast = fast->next;
 }
 return (slow);
 }
