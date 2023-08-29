@@ -1,47 +1,63 @@
-#include <stdlib.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * free_listint_safe - frees a listint_t list that can have a loop
- * @h: pointer
+ * _ra - reallocates memory for an array of pointers
+ * to the nodes in a linked list
+ * @list: the old list to append
+ * @size: size of the new list
+ * @new: new node
  *
- * Return: size of the list that was freed
+ * Return: pointer
  */
-size_t free_listint_safe(listint_t **h)
+listint_t **_ra(listint_t **list, size_t size, listint_t *new)
 {
-listint_t *tmp, *fast, *slow;
-size_t count = 0;
-if (h == NULL || *h == NULL)
-return (0);
-fast = (*h)->next;
-slow = *h;
-while (fast && fast->next)
+listint_t **newlist;
+size_t i;
+newlist = malloc(size * sizeof(listint_t *));
+if (newlist == NULL)
 {
-if (fast == slow)
-{
-do {
-count++;
-fast = fast->next;
-} while (fast != slow);
-while (count > 0)
-{
-tmp = (*h)->next;
-free(*h);
-*h = tmp;
-count--;
+free(list);
+exit(98);
 }
-*h = NULL;
-return (count);
+for (i = 0; i < size - 1; i++)
+newlist[i] = list[i];
+newlist[i] = new;
+free(list);
+return (newlist);
 }
-fast = fast->next->next;
-slow = slow->next;
-}
-while (*h)
+
+/**
+ * free_listint_safe - frees a listint_t linked list.
+ * @head: double pointer
+ *
+ * Return: number of node
+ */
+size_t free_listint_safe(listint_t **head)
 {
-count++;
-tmp = (*h)->next;
-free(*h);
-*h = tmp;
+size_t i, num = 0;
+listint_t **list = NULL;
+listint_t *next;
+if (head == NULL || *head == NULL)
+return (num);
+while (*head != NULL)
+{
+for (i = 0; i < num; i++)
+{
+if (*head == list[i])
+{
+*head = NULL;
+free(list);
+return (num);
 }
-return (count);
+}
+num++;
+list = _ra(list, num, *head);
+next = (*head)->next;
+free(*head);
+*head = next;
+}
+free(list);
+return (num);
 }

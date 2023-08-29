@@ -3,18 +3,17 @@
 
 /**
  * free_listint - frees a listint_t list
- * @head: pointer
+ * @head: the head of the list
  *
  * Return: NULL
  */
 void free_listint(listint_t *head)
 {
-listint_t *tmp;
-while (head != NULL
+listint_t *next;
+while (head != NULL)
 {
-tmp = head;
-head = head->next;
-free(tmp->n);
-free(tmp);
+next = head->next;
+free(head);
+head = next;
 }
 }
